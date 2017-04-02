@@ -52,3 +52,4 @@
         tidydata <- withactions %>%
                 group_by(ID, Action) %>%
                 summarise_all(mean)
+        write.table(tidydata, "tidydata.txt", row.name=FALSE)
